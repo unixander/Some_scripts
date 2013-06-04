@@ -59,7 +59,7 @@ while True:
     buff = url.read(block_size)
     if not buff:
         break
-    file_size_dl += len(buffer)
+    file_size_dl += len(buff)
     destFile.write(buff)
     status = r"%10d [%3.2f%%]" % (file_size_dl, file_size_dl * 100. / file_size)
     status = status + chr(8) * (len(status) + 1)
